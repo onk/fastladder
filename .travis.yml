@@ -2,6 +2,9 @@ rvm:
   - 2.0.0
   - 2.1
 
+# http://docs.travis-ci.com/user/caching/#Enabling-Bundler-caching
+cache: bundler
+
 branches:
   only:
     - master
