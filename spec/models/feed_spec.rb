@@ -1,19 +1,3 @@
-# == Schema Information
-#
-# Table name: feeds
-#
-#  id                :integer          not null, primary key
-#  feedlink          :string(255)      not null
-#  link              :string(255)      not null
-#  title             :text             not null
-#  description       :text             not null
-#  subscribers_count :integer          default(0), not null
-#  image             :string(255)
-#  icon              :string(255)
-#  modified_on       :datetime
-#  created_on        :datetime         not null
-#  updated_on        :datetime         not null
-
 require 'spec_helper'
 
 describe Feed do

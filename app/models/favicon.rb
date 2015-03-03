@@ -4,7 +4,11 @@
 #
 #  id      :integer          not null, primary key
 #  feed_id :integer          default(0), not null
-#  image   :binary
+#  image   :binary(65535)
+#
+# Indexes
+#
+#  index_favicons_on_feed_id  (feed_id) UNIQUE
 #
 
 class Favicon < ActiveRecord::Base

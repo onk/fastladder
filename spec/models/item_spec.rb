@@ -1,24 +1,3 @@
-# == Schema Information
-#
-# Table name: items
-#
-#  id             :integer          not null, primary key
-#  feed_id        :integer          default(0), not null
-#  link           :string(255)      default(""), not null
-#  title          :text             not null
-#  body           :text
-#  author         :string(255)
-#  category       :string(255)
-#  enclosure      :string(255)
-#  enclosure_type :string(255)
-#  digest         :string(255)
-#  version        :integer          default(1), not null
-#  stored_on      :datetime
-#  modified_on    :datetime
-#  created_on     :datetime         not null
-#  updated_on     :datetime         not null
-#
-
 require 'spec_helper'
 
 describe Item do

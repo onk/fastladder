@@ -14,6 +14,12 @@
 #  created_on    :datetime         not null
 #  updated_on    :datetime         not null
 #
+# Indexes
+#
+#  index_subscriptions_on_feed_id                (feed_id)
+#  index_subscriptions_on_folder_id              (folder_id)
+#  index_subscriptions_on_member_id_and_feed_id  (member_id,feed_id) UNIQUE
+#
 
 class Subscription < ActiveRecord::Base
   belongs_to :member

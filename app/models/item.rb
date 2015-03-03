@@ -5,8 +5,8 @@
 #  id             :integer          not null, primary key
 #  feed_id        :integer          default(0), not null
 #  link           :string(255)      default(""), not null
-#  title          :text             not null
-#  body           :text
+#  title          :text(65535)      not null
+#  body           :text(65535)
 #  author         :string(255)
 #  category       :string(255)
 #  enclosure      :string(255)
@@ -17,6 +17,13 @@
 #  modified_on    :datetime
 #  created_on     :datetime         not null
 #  updated_on     :datetime         not null
+#  guid           :string(255)
+#
+# Indexes
+#
+#  index_items_on_digest            (digest)
+#  index_items_on_feed_id_and_guid  (feed_id,guid) UNIQUE
+#  items_search_index               (feed_id,stored_on,created_on,id)
 #
 
 class Item < ActiveRecord::Base

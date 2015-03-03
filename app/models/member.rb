@@ -9,11 +9,15 @@
 #  salt                      :string(255)
 #  remember_token            :string(255)
 #  remember_token_expires_at :datetime
-#  config_dump               :text
+#  config_dump               :text(65535)
 #  public                    :boolean          default(FALSE), not null
 #  created_on                :datetime         not null
 #  updated_on                :datetime         not null
 #  auth_key                  :string(255)
+#
+# Indexes
+#
+#  index_members_on_username  (username) UNIQUE
 #
 
 require "digest/sha1"
